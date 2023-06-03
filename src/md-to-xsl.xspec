@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<x:description xmlns:x="http://www.jenitennison.com/xslt/xspec"
+  stylesheet="md-to-xsl.xsl">
+
+  <x:scenario label="Level 1 Titles">
+    <x:scenario label="# Title 1">
+      <x:context mode="md-to-xslt" select="'# Title 1'"/>
+      <x:expect label="A title element with text inside">
+        <title>Title 1</title>
+      </x:expect>
+    </x:scenario>
+  </x:scenario>
+
+</x:description>
