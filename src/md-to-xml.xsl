@@ -7,8 +7,12 @@
   version="3.0"
   xmlns:mtx="http://www.example.com/fn">
   
+  <xsl:function name="mtx:extractTitleContent" as="xs:string">
+    <xsl:param name="input" as="xs:string"/>
+    <xsl:value-of select="$input => substring(3)"/>
+  </xsl:function>
   <xsl:template match=".[mtx:isTitle1(.)]" mode="md-to-xml">
-    <title>{. => substring(3)}</title>
+    <title>{mtx:extractTitleContent(.)}</title>
   </xsl:template>
   
   <xsl:function name="mtx:isTitle1" as="xs:boolean">
