@@ -14,3 +14,5 @@ This document explains all operations, commit after commit.
   We have to complete the refactoring by typing the function as `xs:boolean`,
   by adding a parameter `input` as `xs:string` and to change the fucntion call
   in the `template/@match`.
+- Use the **Slide Statement** refactoring operation to move the function at the bottom
+  of the file

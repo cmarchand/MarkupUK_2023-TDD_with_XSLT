@@ -6,12 +6,12 @@
   version="3.0"
   xmlns:mtx="http://www.example.com/fn">
   
+  <xsl:template match=".[mtx:isTitle1(.)]" mode="md-to-xml">
+    <title>Title 1</title>
+  </xsl:template>
+  
   <xsl:function name="mtx:isTitle1" as="xs:boolean">
     <xsl:param name="input" as="xs:string"/>
     <xsl:sequence select="$input eq '# Title 1'"/>
   </xsl:function>
-  
-  <xsl:template match=".[mtx:isTitle1(.)]" mode="md-to-xml">
-    <title>Title 1</title>
-  </xsl:template>
 </xsl:stylesheet>
