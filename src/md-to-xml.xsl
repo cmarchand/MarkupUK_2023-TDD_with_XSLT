@@ -3,6 +3,7 @@
   xmlns:xs="http://www.w3.org/2001/XMLSchema"
   xmlns:math="http://www.w3.org/2005/xpath-functions/math"
   exclude-result-prefixes="xs math"
+  expand-text="true"
   version="3.0"
   xmlns:mtx="http://www.example.com/fn">
   
@@ -12,6 +13,6 @@
   
   <xsl:function name="mtx:isTitle1" as="xs:boolean">
     <xsl:param name="input" as="xs:string"/>
-    <xsl:sequence select="$input eq '# Title 1'"/>
+    <xsl:sequence select="$input => starts-with('# ')"/>
   </xsl:function>
 </xsl:stylesheet>

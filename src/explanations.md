@@ -17,3 +17,4 @@ This document explains all operations, commit after commit.
 - Use the **Slide Statement** refactoring operation to move the function at the bottom
   of the file
 - Create a new unit test for level 1 titles, with a different text. This test fails
+- Correct the `isTitle1` function to make the template match the new text
