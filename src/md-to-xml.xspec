@@ -4,7 +4,7 @@
 
   <x:scenario label="Level 1 Titles">
     <x:scenario label="# Title 1">
-      <x:context mode="md-to-xslt" select="'# Title 1'"/>
+      <x:context mode="md-to-xml" select="'# Title 1'"/>
       <x:expect label="A title element with text inside">
         <title>Title 1</title>
       </x:expect>

@@ -5,4 +5,7 @@
   exclude-result-prefixes="xs math"
   version="3.0">
   
+  <xsl:template match=".[. eq '# Title 1']" mode="md-to-xml">
+    <title>Title 1</title>
+  </xsl:template>
 </xsl:stylesheet>
