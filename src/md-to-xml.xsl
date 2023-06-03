@@ -3,9 +3,15 @@
   xmlns:xs="http://www.w3.org/2001/XMLSchema"
   xmlns:math="http://www.w3.org/2005/xpath-functions/math"
   exclude-result-prefixes="xs math"
-  version="3.0">
+  version="3.0"
+  xmlns:mtx="http://www.example.com/fn">
   
-  <xsl:template match=".[. eq '# Title 1']" mode="md-to-xml">
+  <xsl:function name="mtx:isTitle1" as="xs:boolean">
+    <xsl:param name="input" as="xs:string"/>
+    <xsl:sequence select="$input eq '# Title 1'"/>
+  </xsl:function>
+  
+  <xsl:template match=".[mtx:isTitle1(.)]" mode="md-to-xml">
     <title>Title 1</title>
   </xsl:template>
 </xsl:stylesheet>

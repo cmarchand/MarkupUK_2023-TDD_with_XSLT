@@ -10,3 +10,7 @@ This document explains all operations, commit after commit.
 - Add code in `md-to-xml.xsl` to make the test succeed. The minimal code, so just
   a template that matches exactly the text defined in unit test, and that produces
   exactly what is expected in the test.
+- Use **Extract Function** refactoring operation on the predicate in the `template/@match`.
+  We have to complete the refactoring by typing the function as `xs:boolean`,
+  by adding a parameter `input` as `xs:string` and to change the fucntion call
+  in the `template/@match`.
