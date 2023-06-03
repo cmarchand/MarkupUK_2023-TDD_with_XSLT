@@ -21,3 +21,13 @@ This document explains all operations, commit after commit.
 - Change the template content to extract text from the context. The test succeed
 - Use **Extract function** refactoring operation to introduce `extractTitleContent`
   function. Add function typing, parameter and call. The tests still succeed
+- Apply **slide statement** refactoring method to mode `extractTitle1Content` at
+  the bottom of file. Tests still succeed.
+
+Now, the template express exactly the business intent, and all technical code is
+moved and the end of the file. This allows to have a readable code, you start reading
+at the top of the file, and as long as you need details, you keep reading to
+the bottom.
+
+For a developer who will have to maintain this code, reading the xsl file is enough
+to understand the business. And more, all business rules are described as a unit test.
