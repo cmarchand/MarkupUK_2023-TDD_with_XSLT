@@ -9,6 +9,12 @@
         <title>Title 1</title>
       </x:expect>
     </x:scenario>
+    <x:scenario label="# Title 2">
+      <x:context mode="md-to-xml" select="'# Title 2'"/>
+      <x:expect label="A title element with text inside">
+        <title>Title 2</title>
+      </x:expect>
+    </x:scenario>
   </x:scenario>
 
 </x:description>
