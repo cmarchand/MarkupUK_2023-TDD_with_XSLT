@@ -18,3 +18,4 @@ This document explains all operations, commit after commit.
   of the file
 - Create a new unit test for level 1 titles, with a different text. This test fails
 - Correct the `isTitle1` function to make the template match the new text
+- Change the template content to extract text from the context. The test succeed

@@ -8,7 +8,7 @@
   xmlns:mtx="http://www.example.com/fn">
   
   <xsl:template match=".[mtx:isTitle1(.)]" mode="md-to-xml">
-    <title>Title 1</title>
+    <title>{. => substring(3)}</title>
   </xsl:template>
   
   <xsl:function name="mtx:isTitle1" as="xs:boolean">
